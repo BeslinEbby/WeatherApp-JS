@@ -10,7 +10,14 @@ const fetchWeather=async()=>{
     const response =
        await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${search ? search : "delhi"}&appid=140630e06f4a431e18cd2a16c094e4b4&units=metric
 `);
-    
+    const data=await response.json()
+    console.log(data);
+    cityName.textContent=data.name
+    temperature.textContent = Math.round(data.main.temp);
+    weather.textContent=data.weather[0].main
+    humidity.textContent=data.main.humidity+"%"
+    windSpeed.textContent = data.wind.speed + " " + "km/h"
+    icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 
 }
 
