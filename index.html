@@ -21,6 +21,25 @@
                />
                <button class="bg-transparent btn border" onclick="fetchWeather()">Q</button>
             </div>
+            <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+               <h4 id="city"></h4>
+               <div class="d-flex gap-1">
+                  <h2 id="temp"></h2>
+                  <span class="fs-5">&deg C</span>
+               </div>
+               <img style="width: 120px; height: 120px" id="icon" src="" alt="" />
+               <h5 id="weather"></h5>
+               <div class="d-flex justify-content-between w-100 mt-2">
+                  <div class="d-flex flex-column align-items-center gap-2">
+                     <span>Humidity</span>
+                     <span id="hum"></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center gap-2">
+                     <span>Wind Speed</span>
+                     <span id="wind"></span>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
 
